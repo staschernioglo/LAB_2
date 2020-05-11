@@ -18,15 +18,6 @@ namespace MusicInShop.Web.App_Start
             "~/Content/lib/bootstrap/js/bootstrap.min.js",
             "~/Content/lib/php-mail-form/validate.js",
             "~/Content/js/main.js"));
-
-
-
-
-
-
-
-
-
         }
     }
 }

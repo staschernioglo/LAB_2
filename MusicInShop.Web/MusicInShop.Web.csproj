@@ -113,7 +113,6 @@
     <Content Include="Content\contactform\contactform.php" />
     <Content Include="Content\contactform\Readme.txt" />
     <Content Include="Content\css\style.css" />
-    <Content Include="Content\img\about.jpg" />
     <Content Include="Content\img\about1.jpg" />
     <Content Include="Content\img\apple-touch-icon.png" />
     <Content Include="Content\img\back.jpg" />
@@ -121,24 +120,6 @@
     <Content Include="Content\img\back2.jpg" />
     <Content Include="Content\img\contact.jpg" />
     <Content Include="Content\img\favicon.png" />
-    <Content Include="Content\img\portfolio\folio01.png" />
-    <Content Include="Content\img\portfolio\folio02.png" />
-    <Content Include="Content\img\portfolio\folio03.png" />
-    <Content Include="Content\img\portfolio\folio04.png" />
-    <Content Include="Content\img\portfolio\folio05.png" />
-    <Content Include="Content\img\portfolio\folio06.png" />
-    <Content Include="Content\img\portfolio\fot01.png" />
-    <Content Include="Content\img\portfolio\fot02.png" />
-    <Content Include="Content\img\portfolio\fot03.png" />
-    <Content Include="Content\img\portfolio\fot04.png" />
-    <Content Include="Content\img\portfolio\fot05.png" />
-    <Content Include="Content\img\portfolio\fot06.png" />
-    <Content Include="Content\img\portfolio\fot1.jpg" />
-    <Content Include="Content\img\portfolio\fot2.jpg" />
-    <Content Include="Content\img\portfolio\fot3.jpg" />
-    <Content Include="Content\img\portfolio\fot4.jpg" />
-    <Content Include="Content\img\portfolio\fot5.jpg" />
-    <Content Include="Content\img\portfolio\fot6.jpg" />
     <Content Include="Content\img\portfolio\fotka1.jpg" />
     <Content Include="Content\img\portfolio\fotka2.jpg" />
     <Content Include="Content\img\portfolio\fotka3.jpg" />
@@ -147,7 +128,6 @@
     <Content Include="Content\img\portfolio\fotka6.jpg" />
     <Content Include="Content\img\pr01.jpg" />
     <Content Include="Content\img\pr02.jpg" />
-    <Content Include="Content\img\work.jpg" />
     <Content Include="Content\index.html" />
     <Content Include="Content\js\main.js" />
     <Content Include="Content\lib\bootstrap\css\bootstrap.css" />
@@ -161,7 +141,6 @@
     <Content Include="Content\lib\jquery\jquery.js" />
     <Content Include="Content\lib\jquery\jquery.min.js" />
     <Content Include="Content\lib\php-mail-form\validate.js" />
-    <Content Include="Content\Readme.txt" />
     <Content Include="Content\works.html" />
     <Content Include="Global.asax" />
     <Content Include="Scripts\bootstrap.bundle.js" />
@@ -277,6 +256,7 @@
   <ItemGroup>
     <Compile Include="App_Start\BundleConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
+    <Compile Include="Controllers\AboutController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
@@ -303,6 +283,7 @@
     <Content Include="Views\Shared\_Layout.cshtml" />
     <Content Include="Views\Shared\_Header.cshtml" />
     <Content Include="Views\Shared\_Footer.cshtml" />
+    <Content Include="Views\About\Abouts.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
