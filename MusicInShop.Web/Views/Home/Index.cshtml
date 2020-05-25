@@ -3,41 +3,58 @@
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
 
-    <div id="headerwrap">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-6 col-lg-offset-3">
-                    <h4>The best musical instrument store </h4>
-                    <h1>CHUKUNDUR</h1>
-                    <h4>We have opened!</h4>
-                </div>
+<div id="headerwrap">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-6 col-lg-offset-3">
+                <h4>The best musical instrument store </h4>
+                <h1>CHUKUNDUR</h1>
+                <h4>We have opened!</h4>
             </div>
         </div>
-        <!-- /container -->
     </div>
-
-<section id="works"></section>
-<div class="container">
-    <div class="row centered mt mb">
-        <h1>Catalog</h1>
-
-        <div class="col-lg-4 col-md-4 col-sm-4 gallery">
-            <a href="#"><img src="Content/img/portfolio/fotka1.jpg" class="img-responsive"></a>
-        </div>
-        <div class="col-lg-4 col-md-4 col-sm-4 gallery">
-            <a href="#"><img src="Content/img/portfolio/fotka2.jpg" class="img-responsive"></a>
-        </div>
-        <div class="col-lg-4 col-md-4 col-sm-4 gallery">
-            <a href="#"><img src="Content/img/portfolio/fotka3.jpg" class="img-responsive"></a>
-        </div>
-        <div class="col-lg-4 col-md-4 col-sm-4 gallery">
-            <a href="#"><img src="Content/img/portfolio/fotka4.jpg" class="img-responsive"></a>
-        </div>
-        <div class="col-lg-4 col-md-4 col-sm-4 gallery">
-            <a href="#"><img src="Content/img/portfolio/fotka5.jpg" class="img-responsive"></a>
-        </div>
-        <div class="col-lg-4 col-md-4 col-sm-4 gallery">
-            <a href="#"><img src="Content/img/portfolio/fotka6.jpg" class="img-responsive"></a>
-        </div>
-    </div>
+    <!-- /container -->
 </div>
+
+    <section id="works"></section>
+
+    <div class="container">
+        <div class="row centered mt mb">
+            <h1>Catalog</h1>
+            @foreach (MusicInShop.Web.Models.Instrument b in Model)
+            {
+
+                <div class="col-lg-4 col-md-4 col-sm-4 gallery">
+                    <a href="#"><img src="Content/img/portfolio/fotka1.jpg" class="img-responsive"></a>
+                    <h3>@b.Name</h3><h4>@b.Description</h4>
+                    <h4>@b.Price</h4>
+                </div>
+
+            <div class="col-lg-4 col-md-4 col-sm-4 gallery">
+                <a href="#"><img src="Content/img/portfolio/fotka2.jpg" class="img-responsive"></a>
+                <h3>@b.Name</h3><h4>@b.Description</h4>
+                <h4>@b.Price</h4>
+            </div>
+            <div class="col-lg-4 col-md-4 col-sm-4 gallery">
+                <a href="#"><img src="Content/img/portfolio/fotka3.jpg" class="img-responsive"></a>
+                <h3>@b.Name</h3><h4>@b.Description</h4>
+                <h4>@b.Price</h4>
+            </div>
+            <div class="col-lg-4 col-md-4 col-sm-4 gallery">
+                <a href="#"><img src="Content/img/portfolio/fotka4.jpg" class="img-responsive"></a>
+                <h3>@b.Name</h3><h4>@b.Description</h4>
+                <h4>@b.Price</h4>
+            </div>
+            <div class="col-lg-4 col-md-4 col-sm-4 gallery">
+                <a href="#"><img src="Content/img/portfolio/fotka5.jpg" class="img-responsive"></a>
+                <h3>@b.Name</h3><h4>@b.Description</h4>
+                <h4>@b.Price</h4>
+            </div>
+            <div class="col-lg-4 col-md-4 col-sm-4 gallery">
+                <a href="#"><img src="Content/img/portfolio/fotka6.jpg" class="img-responsive"></a>
+                <h3>@b.Name</h3><h4>@b.Description</h4>
+                <h4>@b.Price</h4>
+            </div>
+            }
+        </div>
+    </div>
