@@ -9,6 +9,7 @@ namespace MusicInShop.BusinessLogic.Core
         public UserContext() :
             base("name=eUseControl") // connectionstring name define in your web.config
         {
+
         }
 
         public virtual DbSet<UDbTable> Users { get; set; }
