@@ -374,6 +374,7 @@
     <Content Include="Views\Project\ParticipatingVolunteers.cshtml" />
     <Content Include="Views\Volunteer\MyParticipations.cshtml" />
     <Content Include="Views\Organization\ParticipatingVolunteers.cshtml" />
+    <Content Include="Views\Project\FilteredProject.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>

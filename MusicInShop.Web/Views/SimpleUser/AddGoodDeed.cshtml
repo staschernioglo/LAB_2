@@ -9,17 +9,11 @@
 {
     @Html.AntiForgeryToken()
 
-    <div class="form-horizontal">
-        <span><img src="~/Content/img/white.png" alt="" height="80"></span>
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-6 col-lg-offset-3">
-                    <h4></h4>
-                </div>
-            </div>
-        </div>
+<div class="form-horizontal">
+    <span><img src="~/Content/img/white.png" alt="" height="100"></span>
+    <hr />
 
-        <hr />
+    <div class="add-gdeed-box">
         @Html.ValidationSummary(true, "", new { @class = "text-danger" })
         <div class="form-group">
             @Html.LabelFor(model => model.Name, htmlAttributes: new { @class = "control-label col-md-2" })
@@ -71,7 +65,7 @@
 
         <div class="form-group">
             @Html.LabelFor(model => model.PhoneNumber, htmlAttributes: new { @class = "control-label col-md-2" })
-            <div class="col-md-10">
+            <div class="col-md-10 ph-n">
                 @Html.EditorFor(model => model.PhoneNumber, new { htmlAttributes = new { @class = "form-control" } })
                 @Html.ValidationMessageFor(model => model.Address, "", new { @class = "text-danger" })
             </div>
@@ -79,7 +73,7 @@
 
         <div class="form-group">
             @Html.LabelFor(model => model.RequiredNumberOfVolunteers, htmlAttributes: new { @class = "control-label col-md-2" })
-            <div class="col-md-10">
+            <div class="col-md-10 num-vol-2">
                 @Html.EditorFor(model => model.RequiredNumberOfVolunteers, new { htmlAttributes = new { @class = "form-control" } })
                 @Html.ValidationMessageFor(model => model.RequiredNumberOfVolunteers, "", new { @class = "text-danger" })
             </div>
@@ -87,24 +81,25 @@
 
         <div class="form-group">
             @Html.LabelFor(model => model.ImageUrl, htmlAttributes: new { @class = "control-label col-md-2" })
-            <div class="col-md-10">
-                @Html.EditorFor(model => model.ImageUrl, new { htmlAttributes = new { @class = "form-control" } })
+            <div class="col-md-10 img-marg">
+                @Html.EditorFor(model => model.ImageUrl, new { htmlAttributes = new { type = "file" } })
                 @Html.ValidationMessageFor(model => model.ImageUrl, "", new { @class = "text-danger" })
             </div>
         </div>
 
         <div class="form-group">
-            <div class="col-md-offset-2 col-md-10">
+            <div class="col-md-offset-4 col-md-10">
                 <input type="submit" value="Добавить" class="btn btn-default btn-top" />
             </div>
         </div>
     </div>
-}
+</div>
+    }
 
-<div class="container">
-    <div class="row">
-        <div class="col-lg-6 col-lg-offset-3">
-            @*@Html.ActionLink("Вернуться к списку", "Index")*@
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-6 col-lg-offset-3">
+                @*@Html.ActionLink("Вернуться к списку", "Index")*@
+            </div>
         </div>
     </div>
-</div>

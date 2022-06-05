@@ -16,6 +16,12 @@ namespace MusicInShop.Web.Controllers
             return View(model);
         }
 
+        public ActionResult FilteredProject()
+        {
+            var model = new ProjectModel { User = LoggedUser, Projects = ProjectAPI.GetAllProjects() };
+            return View(model);
+        }
+
         public ActionResult Project(int id)
         {
             var model = new ProjectPageModel { User = LoggedUser, Project = ProjectAPI.GetProject(id) };

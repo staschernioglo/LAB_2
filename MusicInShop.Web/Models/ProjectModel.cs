@@ -28,7 +28,7 @@ namespace MusicInShop.Web.Models
         public string Address { get; set; }
         [Display(Name = "Необходимое количество волонтёров")]
         public int RequiredNumberOfVolunteers { get; set; }
-
+        [Display(Name = "Фото")]
         [DataType(DataType.ImageUrl)]
         public string ImageUrl { get; set; }
 

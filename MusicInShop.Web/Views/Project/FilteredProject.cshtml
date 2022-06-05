@@ -1,16 +1,16 @@
-﻿@model MusicInShop.Web.Models.GoodDeedModel
+﻿@model MusicInShop.Web.Models.ProjectModel
 @{
-    ViewBag.Title = "Доброе дело";
+    ViewBag.Title = "Проект";
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
 
 <div class="shop-section section pt-60 pt-lg-40 pt-md-30 pt-sm-20 pt-xs-30  pb-70 pb-lg-50 pb-md-40 pb-sm-20 pb-xs-20">
-
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <div class="container">
         <div class="row">
             <div class="col-12">
                 <div class="shop-area">
-                    <span><img src="~/Content/img/white.png" alt="" height="70"></span>
+                    <span><img src="~/Content/img/white.png" alt="" height="50"></span>
                     <div class="filter-opt">
                         <div class="search-st d7">
                             <input class="form-control" id="myInput" type="text" placeholder="Искать...">
@@ -20,7 +20,7 @@
                             <form class="form-inline">
                                 <div class="form-group">
                                     <select class="custom-select txt-props">
-                                        <option value="">Категория</option>
+                                        <option value="">Экология</option>
                                         <option value="Экология">Экология</option>
                                         <option value="Старшее поколение">Старшее поколение</option>
                                         <option value="Здравоохранение">Здравоохранение</option>
@@ -29,20 +29,21 @@
 
                                 <div class="form-group locality-flt">
                                     <select class="custom-select txt-props">
-                                        <option value="">Населенный пункт</option>
+                                        <option value="">Кишинев</option>
                                         <option value="Кишинев">Кишинев</option>
                                         <option value="Бельцы">Бельцы</option>
                                         <option value="Чимишлия">Чимишлия</option>
                                     </select>
                                 </div>
-                                <button class="btn glow-button-2 flr-btn" type="submit"><a href="@Url.Action("FilteredProject","Project")">Применить фильтры</a></button>
+                                <button class="btn glow-button-2 flr-btn" type="submit">Применить фильтры</button>
                             </form>
                         </div>
                     </div>
 
+
                     @{
-                        var goodDeeds = Model.GoodDeeds.OrderByDescending(g => g.Id);
-                        var count = goodDeeds.Count();
+                        var projects = Model.Projects.Where(x => x.Category == "Экология" && x.Town == "Кишинев").OrderByDescending(p => p.Id);
+                        var count = projects.Count();
                         var rows = count / 4;
                         if (rows * 4 != count)
                         {
@@ -59,35 +60,38 @@
                                                     <div id="grid" class="tab-pane fade active show">
                                                         <div class="product-grid-view">
                                                             <div class="row">
+                                                                <ul id="myProj">
+                                                                    @for (int j = i * 4; j < 4 + i * 4 && j < count; j++)
+                                                                    {
+                                                                        var project = projects.ElementAt(j);
+                                                                        var projectUrl = Url.Action("Project", "Project", new { id = project.Id });
+                                                                        <li>
+                                                                            <div class="col-lg-3 col-md-6 col-sm-6">
+                                                                                <!--  Single Grid product Start -->
+                                                                                <div class="single-grid-product mb-40">
+                                                                                    <div @*class="grid-content"*@>
+                                                                                        <div @*class="img-wrapper"*@>
+                                                                                            <div class="product-image @*product-img-wrapper*@">
+                                                                                                <a href="@projectUrl">
+                                                                                                    <img src="@string.Format($"/Content/img/projects/{project.Id}.jpg")" alt="">
+                                                                                                </a>
 
-                                                                @for (int j = i * 4; j < 4 + i * 4 && j < count; j++)
-                                                                {
-                                                                    var goodDeed = goodDeeds.ElementAt(j);
-                                                                    var goodDeedUrl = Url.Action("GoodDeed", "GoodDeed", new { id = goodDeed.Id });
-
-                                                                    <div class="col-lg-3 col-md-6 col-sm-6">
-                                                                        <!--  Single Grid product Start -->
-                                                                        <div class="single-grid-product mb-40">
-                                                                            <div class="product-image">
-                                                                                <div class="product-label">
+                                                                                                <div class="product-action">
+                                                                                                    <ul>
+                                                                                                    </ul>
+                                                                                                </div>
+                                                                                            </div>
+                                                                                        </div>
+                                                                                        <div class="product-content">
+                                                                                            <h3 class="title"> <a href="@projectUrl">@project.Name</a></h3>
+                                                                                        </div>
+                                                                                    </div>
                                                                                 </div>
-                                                                                <a href="@goodDeedUrl">
-                                                                                    <img src="@string.Format($"/Content/img/goodDeeds/{goodDeed.Id}.jpg")" alt="">
-                                                                                </a>
-
-                                                                                <div class="product-action">
-                                                                                    <ul>
-                                                                                    </ul>
-                                                                                </div>
+                                                                                <!--  Single Grid product End -->
                                                                             </div>
-                                                                            <div class="product-content">
-                                                                                <h3 class="title"> <a href="@goodDeedUrl">@goodDeed.Name</a></h3>
-                                                                            </div>
-                                                                        </div>
-                                                                        <!--  Single Grid product End -->
-                                                                    </div>
-
-                                                                }
+                                                                        </li>
+                                                                    }
+                                                                </ul>
                                                             </div>
 
                                                         </div>
@@ -110,7 +114,6 @@
         </div>
     </div>
 </div>
-
 <script>
     $(document).ready(function () {
         $("#myInput").on("keyup", function () {

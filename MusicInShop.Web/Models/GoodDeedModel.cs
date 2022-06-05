@@ -31,7 +31,9 @@ namespace MusicInShop.Web.Models
         [Display(Name = "Необходимое количество волонтёров")]
         public int RequiredNumberOfVolunteers { get; set; }
 
+        
         [DataType(DataType.ImageUrl)]
+        [Display(Name = "Фото")]
         public string ImageUrl { get; set; }
 
         public IEnumerable<GoodDeedDTO> GoodDeeds { get; set; }

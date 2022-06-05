@@ -1066,3 +1066,30 @@ h1, h2, h3, h4, h5, h6 {
 	font-weight: 600;
 	font-size: 15px;
 }
+
+.num-vol {
+	margin-top: 30px;
+}
+
+.num-vol-2 {
+	margin-top: 33px;
+}
+
+.img-marg {
+	margin-top: 7px;
+}
+
+.add-proj-box {
+	margin-left: 320px;
+	margin-right: auto;
+	width: 830px;
+}
+
+.add-gdeed-box {
+	margin-left: 320px;
+	width: 830px;
+}
+
+.ph-n {
+	margin-top: 15px;
+}
