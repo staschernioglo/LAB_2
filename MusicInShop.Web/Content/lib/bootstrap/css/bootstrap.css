@@ -274,6 +274,7 @@ th {
   font-style: normal;
   font-weight: normal;
   line-height: 1;
+  
 
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
@@ -309,6 +310,11 @@ th {
 .glyphicon-search:before {
   content: "\e003";
 }
+
+.glyphicon-white {
+    color: white;
+}
+
 .glyphicon-heart:before {
   content: "\e005";
 }

@@ -20,7 +20,10 @@ namespace MusicInShop.Web.Controllers
 
         protected IUserAPI UserAPI => Bl.UserAPI;
         protected IProductAPI ProductAPI => Bl.ProductAPI;
+        protected IProjectAPI ProjectAPI => Bl.ProjectAPI;
+        protected IGoodDeedAPI GoodDeedAPI => Bl.GoodDeedAPI;
         protected IAdminAPI AdminAPI => Bl.AdminAPI;
+        protected IProjectVolunteerAPI ProjectVolunteerAPI => Bl.ProjectVolunteerAPI;
         protected UserDTO LoggedUser => UserAPI.GetUser(User.Identity.Name);
 
     }

@@ -14,6 +14,42 @@ namespace MusicInShop.Web.Controllers
             var model = new ShopModel { User = LoggedUser, Products = ProductAPI.GetAllProducts() };
             return View(model);
         }
+
+        public ActionResult Guitar()
+        {
+            var model = new ShopModel { User = LoggedUser, Products = ProductAPI.GetAllProducts() };
+            return View(model);
+        }
+
+        public ActionResult Keyboard()
+        {
+            var model = new ShopModel { User = LoggedUser, Products = ProductAPI.GetAllProducts() };
+            return View(model);
+        }
+
+        public ActionResult Violin()
+        {
+            var model = new ShopModel { User = LoggedUser, Products = ProductAPI.GetAllProducts() };
+            return View(model);
+        }
+        public ActionResult Wind()
+        {
+            var model = new ShopModel { User = LoggedUser, Products = ProductAPI.GetAllProducts() };
+            return View(model);
+        }
+
+        public ActionResult Accessories()
+        {
+            var model = new ShopModel { User = LoggedUser, Products = ProductAPI.GetAllProducts() };
+            return View(model);
+        }
+
+        public ActionResult Search()
+        {
+            var model = new ShopModel { User = LoggedUser, Products = ProductAPI.GetAllProducts() };
+            return View(model);
+        }
+
         public ActionResult Product(int id)
         {
             var model = new ProductPageModel { User = LoggedUser, Product = ProductAPI.GetProduct(id) };

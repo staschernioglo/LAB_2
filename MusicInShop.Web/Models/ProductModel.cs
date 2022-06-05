@@ -10,6 +10,9 @@ namespace MusicInShop.Web.Models
     {
         [Required]
         public string Name { get; set; }
+        public string Description { get; set; }
+        public string Category { get; set; }
+
         [Required]
         [DataType(DataType.Currency)]
         public decimal Price { get; set; }

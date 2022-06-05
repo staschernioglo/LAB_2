@@ -23,6 +23,8 @@ namespace MusicInShop.BusinessLogic.API
             return new ProductDTO
             {
                 Id = product.Id,
+                Category = product.Category,
+                Description = product.Description,
                 Discount = product.Discount,
                 Name = product.Name,
                 Price = product.Price

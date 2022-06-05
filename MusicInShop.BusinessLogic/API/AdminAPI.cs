@@ -19,7 +19,7 @@ namespace MusicInShop.BusinessLogic.API
         }
         public void AddProduct(ProductDTO productDTO, string imageUrl, string directory)
         {
-            var product = new Product { Name = productDTO.Name, Price = productDTO.Price, Discount = productDTO.Discount };
+            var product = new Product { Name = productDTO.Name, Category = productDTO.Category, Description= productDTO.Description, Price = productDTO.Price, Discount = productDTO.Discount };
             Database.Products.Create(product);
             Database.Save();
             using (WebClient client = new WebClient())

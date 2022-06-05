@@ -17,14 +17,20 @@ namespace MusicInShop.Domain
             db = new DataContext(connectionName);
             Users = new UserRepository(db);
             Products = new ProductRepository(db);
+            Projects = new ProjectRepository(db);
+            GoodDeeds = new GoodDeedRepository(db);
             CartProducts = new CartProductRepository(db);
+            ProjectVolunteers = new ProjectVolunteerRepository(db);
         }
 
         DataContext db { get; }
         public IRepository<User> Users { get; }
 
         public IRepository<Product> Products { get; }
+        public IRepository<Project> Projects { get; }
+        public IRepository<GoodDeed> GoodDeeds { get; }
         public IRepository<CartProduct> CartProducts { get; }
+        public IRepository<ProjectVolunteer> ProjectVolunteers { get; }
 
         public void Save()
         {

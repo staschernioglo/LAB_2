@@ -27,8 +27,7 @@ namespace MusicInShop.Domain.Repositories
         {
             if (item != null)
             {
-
-                db.CartProducts.RemoveRange(item.CartProducts);
+                //db.CartProducts.RemoveRange(item.CartProducts);
                 db.Users.Remove(item);
             }
         }
@@ -55,7 +54,7 @@ namespace MusicInShop.Domain.Repositories
 
         public IEnumerable<User> GetAll()
         {
-            return db.Users.ToList();
+            return db.Users.Include("ProjectVolunteers").ToList();
         }
 
         public void Update(User item)

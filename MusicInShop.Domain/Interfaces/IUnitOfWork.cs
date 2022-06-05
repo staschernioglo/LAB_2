@@ -11,7 +11,10 @@ namespace MusicInShop.Domain.Interfaces
     {
         IRepository<User> Users { get; }
         IRepository<Product> Products { get; }
+        IRepository<Project> Projects { get; }
+        IRepository<GoodDeed> GoodDeeds { get; }
         IRepository<CartProduct> CartProducts { get; }
+        IRepository<ProjectVolunteer> ProjectVolunteers { get; }
         void Save();
     }
 }

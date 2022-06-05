@@ -20,7 +20,10 @@ namespace MusicInShop.Domain.Contexts
 
         public DbSet<User> Users { get; set; }
         public DbSet<Product> Products { get; set; }
+        public DbSet<Project> Projects { get; set; }
+        public DbSet<GoodDeed> GoodDeeds { get; set; }
         public DbSet<CartProduct> CartProducts { get; set; }
+        public DbSet<ProjectVolunteer> ProjectVolunteers { get; set; }
     }
 
     class AdminInitializer : CreateDatabaseIfNotExists<DataContext>
@@ -28,7 +31,7 @@ namespace MusicInShop.Domain.Contexts
         protected override void Seed(DataContext context)
         {
             base.Seed(context);
-            context.Users.Add(new User { Email = "admin@mail.ru", NickName = "admin", Password = "admin", Role = "admin" });
+            context.Users.Add(new User { Email = "admin@mail.ru", Name = "admin", Password = "admin", Role = "admin" });
             context.SaveChanges();
         }
     }

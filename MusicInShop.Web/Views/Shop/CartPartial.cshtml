@@ -9,7 +9,7 @@
 		<div class="col-12">
 			<!-- Cart Table -->
 			<div class="cart-table table-responsive mb-30">
-				<span><img src="~/Content/img/white.png" alt="" height="70"></span>
+				<span><img src="~/Content/img/white.png" alt="" height="40"></span>
 				@if (Model.User.CartProducts.Count() > 0)
 				{
 					<table class="table">
@@ -33,7 +33,7 @@
 								<tr>
 									<td class="pro-thumbnail">
 										<a href="@productUrl">
-											<img src="@string.Format($"/Content/img/portfolio/foto{product.Id}.jpg")" class="img-responsive" alt="Product">
+											<img src="@string.Format($"/Content/img/portfolio/{product.Id}.jpg")" class="img-responsive" alt="Product">
 										</a>
 									</td>
 									<td class="pro-title"><a href="@productUrl">@product.Name</a></td>

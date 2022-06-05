@@ -56,13 +56,19 @@
   <ItemGroup>
     <Compile Include="Contexts\DataContext.cs" />
     <Compile Include="Entities\CartProduct.cs" />
+    <Compile Include="Entities\GoodDeed.cs" />
     <Compile Include="Entities\Product.cs" />
+    <Compile Include="Entities\Project.cs" />
+    <Compile Include="Entities\ProjectVolunteer.cs" />
     <Compile Include="Entities\User.cs" />
     <Compile Include="Interfaces\IRepository.cs" />
     <Compile Include="Interfaces\IUnitOfWork.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Repositories\CartProductRepository.cs" />
+    <Compile Include="Repositories\GoodDeedRepository.cs" />
     <Compile Include="Repositories\ProductRepository.cs" />
+    <Compile Include="Repositories\ProjectRepository.cs" />
+    <Compile Include="Repositories\ProjectVolunteerRepository.cs" />
     <Compile Include="Repositories\UserRepository.cs" />
     <Compile Include="UnitOfWork.cs" />
   </ItemGroup>

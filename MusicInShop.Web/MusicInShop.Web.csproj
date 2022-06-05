@@ -142,10 +142,10 @@
     <Content Include="Content\img\portfolio\fotka4.jpg" />
     <Content Include="Content\img\portfolio\fotka5.jpg" />
     <Content Include="Content\img\portfolio\fotka6.jpg" />
-    <Content Include="Content\img\portfolio\foto2.jpg" />
-    <Content Include="Content\img\portfolio\foto4.jpg" />
-    <Content Include="Content\img\portfolio\foto5.jpg" />
-    <Content Include="Content\img\portfolio\foto7.jpg" />
+    <Content Include="Content\img\portfolio\2.jpg" />
+    <Content Include="Content\img\portfolio\4.jpg" />
+    <Content Include="Content\img\portfolio\5.jpg" />
+    <Content Include="Content\img\portfolio\7.jpg" />
     <Content Include="Content\img\pr01.jpg" />
     <Content Include="Content\img\pr02.jpg" />
     <Content Include="Content\img\white.png" />
@@ -290,18 +290,36 @@
     <Compile Include="Controllers\AccountController.cs" />
     <Compile Include="Controllers\AdminController.cs" />
     <Compile Include="Controllers\BaseController.cs" />
+    <Compile Include="Controllers\GoodDeedController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Controllers\OrganizationController.cs" />
+    <Compile Include="Controllers\ProjectController.cs" />
     <Compile Include="Controllers\ShopController.cs" />
+    <Compile Include="Controllers\SimpleUserController.cs" />
+    <Compile Include="Controllers\UserController.cs" />
+    <Compile Include="Controllers\VolunteerController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
     <Compile Include="Models\AdminPageModel.cs" />
+    <Compile Include="Models\GoodDeedModel.cs" />
+    <Compile Include="Models\GoodDeedPageModel.cs" />
     <Compile Include="Models\LoginModel.cs" />
     <Compile Include="Models\NavbarModel.cs" />
+    <Compile Include="Models\OrganizationPageModel.cs" />
+    <Compile Include="Models\OrganizationProjectModel.cs" />
+    <Compile Include="Models\ParticipatingVolunteersModel.cs" />
     <Compile Include="Models\ProductModel.cs" />
     <Compile Include="Models\ProductPageModel.cs" />
+    <Compile Include="Models\ProjectModel.cs" />
+    <Compile Include="Models\ProjectPageModel.cs" />
     <Compile Include="Models\RegisterModel.cs" />
+    <Compile Include="Models\RegisterOrganizationModel.cs" />
+    <Compile Include="Models\RegisterSimpleUserModel.cs" />
+    <Compile Include="Models\RegisterVolunteerModel.cs" />
     <Compile Include="Models\ShopModel.cs" />
+    <Compile Include="Models\UserPageModel.cs" />
+    <Compile Include="Models\VolunteerPageModel.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -333,6 +351,29 @@
     <Content Include="Views\Shop\CartPartial.cshtml" />
     <Content Include="Views\Shop\Index.cshtml" />
     <Content Include="Views\Shop\Product.cshtml" />
+    <Content Include="Views\Shop\Guitar.cshtml" />
+    <Content Include="Views\Shop\Keyboard.cshtml" />
+    <Content Include="Views\Shop\Violin.cshtml" />
+    <Content Include="Views\Shop\Wind.cshtml" />
+    <Content Include="Views\Shop\Accessories.cshtml" />
+    <Content Include="Views\Shop\Search.cshtml" />
+    <Content Include="Views\Account\RegisterType.cshtml" />
+    <Content Include="Views\Account\RegisterOrganization.cshtml" />
+    <Content Include="Views\Account\RegisterVolunteer.cshtml" />
+    <Content Include="Views\Account\RegisterSimpleUser.cshtml" />
+    <Content Include="Views\Organization\AddProject.cshtml" />
+    <Content Include="Views\Project\Index.cshtml" />
+    <Content Include="Views\SimpleUser\AddGoodDeed.cshtml" />
+    <Content Include="Views\GoodDeed\Index.cshtml" />
+    <Content Include="Views\User\OrganizationPage.cshtml" />
+    <Content Include="Views\User\VolunteerPage.cshtml" />
+    <Content Include="Views\Project\Project.cshtml" />
+    <Content Include="Views\GoodDeed\GoodDeed.cshtml" />
+    <Content Include="Views\Organization\OrganizationPage.cshtml" />
+    <Content Include="Views\Organization\MyProjects.cshtml" />
+    <Content Include="Views\Project\ParticipatingVolunteers.cshtml" />
+    <Content Include="Views\Volunteer\MyParticipations.cshtml" />
+    <Content Include="Views\Organization\ParticipatingVolunteers.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>

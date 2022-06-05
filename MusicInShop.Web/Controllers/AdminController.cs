@@ -30,8 +30,8 @@ namespace MusicInShop.Web.Controllers
         {
             if (ModelState.IsValid)
             {
-                var product = new ProductDTO { Name = model.Name, Discount = model.Discount, Price = model.Price };
-                var directory = Server.MapPath("~/Content/images/product");
+                var product = new ProductDTO { Name = model.Name, Category = model.Category, Description = model.Description, Discount = model.Discount, Price = model.Price };
+                var directory = Server.MapPath("~/Content/img/portfolio");
                 AdminAPI.AddProduct(product, model.ImageUrl, directory);
                 return RedirectToAction("Index");
             }
@@ -40,7 +40,7 @@ namespace MusicInShop.Web.Controllers
         [Admin]
         public ActionResult DeleteProduct(int id)
         {
-            var directory = Server.MapPath("~/Content/images/product");
+            var directory = Server.MapPath("~/Content/img/portfolio");
             AdminAPI.DeleteProduct(id, directory);
             return RedirectToAction("Index");
         }

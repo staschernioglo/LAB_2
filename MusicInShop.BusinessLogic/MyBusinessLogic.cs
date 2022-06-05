@@ -22,6 +22,9 @@ namespace MusicInshop.BusinessLogic
         IUserAPI userAPI;
         IProductAPI productAPI;
         IAdminAPI adminAPI;
+        IProjectAPI projectAPI;
+        IGoodDeedAPI goodDeedAPI;
+        IProjectVolunteerAPI projectVolunteerAPI;
 
         public IUserAPI UserAPI
         {
@@ -41,6 +44,37 @@ namespace MusicInshop.BusinessLogic
                 return productAPI;
             }
         }
+
+        public IProjectAPI ProjectAPI
+        {
+            get
+            {
+                if (projectAPI == null)
+                    projectAPI = new ProjectAPI(Database);
+                return projectAPI;
+            }
+        }
+
+        public IGoodDeedAPI GoodDeedAPI
+        {
+            get
+            {
+                if (goodDeedAPI == null)
+                    goodDeedAPI = new GoodDeedAPI(Database);
+                return goodDeedAPI;
+            }
+        }
+
+        public IProjectVolunteerAPI ProjectVolunteerAPI
+        {
+            get
+            {
+                if (projectVolunteerAPI == null)
+                    projectVolunteerAPI = new ProjectVolunteerAPI(Database);
+                return projectVolunteerAPI;
+            }
+        }
+
         public IAdminAPI AdminAPI
         {
             get

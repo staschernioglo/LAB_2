@@ -53,13 +53,22 @@
   <ItemGroup>
     <Compile Include="API\AdminAPI.cs" />
     <Compile Include="API\API.cs" />
+    <Compile Include="API\GoodDeedAPI.cs" />
     <Compile Include="API\ProductAPI.cs" />
+    <Compile Include="API\ProjectAPI.cs" />
+    <Compile Include="API\ProjectVolunteerAPI.cs" />
     <Compile Include="API\UserAPI.cs" />
+    <Compile Include="DataTransfer\GoodDeedDTO.cs" />
     <Compile Include="DataTransfer\ProductDTO.cs" />
+    <Compile Include="DataTransfer\ProjectDTO.cs" />
+    <Compile Include="DataTransfer\ProjectVolunteerDTO.cs" />
     <Compile Include="DataTransfer\UserDTO.cs" />
     <Compile Include="Infrastructure\Result.cs" />
     <Compile Include="Interfaces\IAdminAPI.cs" />
+    <Compile Include="Interfaces\IGoodDeedAPI.cs" />
     <Compile Include="Interfaces\IProductAPI.cs" />
+    <Compile Include="Interfaces\IProjectAPI.cs" />
+    <Compile Include="Interfaces\IProjectVolunteerAPI.cs" />
     <Compile Include="Interfaces\IUserAPI.cs" />
     <Compile Include="MyBusinessLogic.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
