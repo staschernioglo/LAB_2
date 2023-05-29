@@ -10,9 +10,9 @@ namespace MusicInShop.Web.Models
     public class GoodDeedModel : NavbarModel
     {
         [Required]
-        [Display(Name = "Название")]
+        [Display(Name = "Название *")]
         public string Name { get; set; }
-        [Display(Name = "Категория")]
+        [Display(Name = "Категория *")]
         public string Category { get; set; }
         [Display(Name = "Описание")]
         [DataType(DataType.MultilineText)]

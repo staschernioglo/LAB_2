@@ -302,8 +302,11 @@
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
     <Compile Include="Models\AdminPageModel.cs" />
+    <Compile Include="Models\Category.cs" />
+    <Compile Include="Models\GDCategory.cs" />
     <Compile Include="Models\GoodDeedModel.cs" />
     <Compile Include="Models\GoodDeedPageModel.cs" />
+    <Compile Include="Models\Locality.cs" />
     <Compile Include="Models\LoginModel.cs" />
     <Compile Include="Models\NavbarModel.cs" />
     <Compile Include="Models\OrganizationPageModel.cs" />
